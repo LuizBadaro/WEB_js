@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Luiz Fernando badaro Villas Boas,WEB,200027626" content="Atividade sobre JavaScript">
+    <title>JavaScript</title>
+
+    <script>
+        function IMC() {
+
+            var peso = parseFloat(document.getElementById("peso").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            var imc = peso / (altura * altura);
+            var classe;
+        
+            if (imc <= 16.90) {
+                classe = "Muito abaixo do peso";
+            } else if (imc <= 18.40) {
+                classe = "Abaixo do peso";
+            } else if (imc <= 24.90) {
+                classe = "Peso normal";
+            } else if (imc <= 29.90) {
+                classe = "Acima do peso";
+            } else {
+                classe = "Obesidade";
+            }
+
+            alert( "IMC: " + imc.toFixed(2) + "\nClassificacao: " + classe); 
+        }
+       
+    </script>
+
+</head>
+<body>
+    <form id="IMC">
+
+       Peso: <input type="number" id="peso" name="peso"></p>
+       Altura: <input type="number" id="altura" name="altura"></p>
+        
+        <input type="button" value="Calcular IMC" onclick="IMC()">
+    </form>  
+</body>
+</html>
